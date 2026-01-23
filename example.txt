@@ -1,0 +1,28 @@
+Data Types and variables
+Operators and Expressions
+Control Flow Statements :
+    Conditional Statements:
+        - IF Else
+        - Else IF
+        - Switch
+    Looping Statements:
+        - For
+        - While
+        - DoWhile
+    Branching Statements:
+        - Continue
+        - break
+
+functions and methods
+
+Core Java and Adv Java
+OOPs : Object oriented programming language
+    Class and objects
+    Constructors : default(non parameterized), parameterized, copy Constructor
+    4 pillars : Polymorphism, inheritance, encapsulation, abstraction
+
+Arrays
+Strings
+
+
+[1, 2, 3, 4, 5, 6, ....... 10k] = 21

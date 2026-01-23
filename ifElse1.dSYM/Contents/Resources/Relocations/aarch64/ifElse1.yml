@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Applications/development/FSD_New_Batch/ifElse1'
+relocations:     []
+...
