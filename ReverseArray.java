@@ -22,7 +22,7 @@ public class ReverseArray {
             j--;
         }
 
-         System.out.println("Array After: ");
+        System.out.println("Array After: ");
         for(int k = 0;k<n;k++){
             System.out.print(arr[k] + " ");
         }
