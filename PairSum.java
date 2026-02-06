@@ -1,6 +1,15 @@
 import java.util.Scanner;
 
 public class PairSum {
+
+
+
+    void function(int[] arr, int target){ {
+        // function body
+
+    }
+
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

@@ -45,7 +45,7 @@ public class arrayImplementation {
         }
         System.out.println();
 
-        Arrays.sort(arr);
+        Arrays.sort(arr); //O(n log n)
 
         System.out.println("After Sorting: ");
         for(int i = 0;i<n;i++){
