@@ -1,3 +1,4 @@
+
 public class QueueImpUsingArray {
 
     int[] arrQueue;
@@ -76,6 +77,9 @@ public class QueueImpUsingArray {
         queue.enqueue(3);
         queue.enqueue(4);
         queue.enqueue(5);
+
+        System.out.println("Dequeued element: " + queue.deQueue());
+        queue.enqueue(6);
 
         queue.displayQueue();
 
