@@ -47,6 +47,15 @@ public class linkedlIstImp {
 
     }
 
+    public static Node insertAtEnd(Node head, int val){
+        if(head == null){
+            return new Node(val);
+        }
+        head.next = insertAtEnd(head.next, val);
+
+        return head;
+    }
+
 
     void addAtPos(int val, int pos){
         Node newNode = new Node(val);
