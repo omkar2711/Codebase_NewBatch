@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Clone - HTML Only</title>
+    <link rel="stylesheet" href="./Styles.css">
 </head>
-<body bgcolor="#ffffff">
+<body >
     <table width="100%" cellspacing="0" cellpadding="8">
         <tr valign="middle">
-            <td width="16%">
-                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/120px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" width="38"></a>
-                <b>YouTube</b>
+            <td width="16%" id="logo">
+                <a  href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/120px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube" width="38"></a>
+                <b id="youtube">YouTube</b>
             </td>
             <td width="66%" align="center">
                 <form>
-                    <input type="text" placeholder="Search" size="60">
-                    <button type="submit">Search</button>
+                    <input id="search-input" type="text" placeholder="Search" size="60">
+                    <button id="search-btn" type="submit">Search</button>
                 </form>
             </td>
             <td width="18%" align="right">
@@ -26,21 +27,22 @@
         </tr>
     </table>
 
-    <hr>
 
-    <table width="100%" cellspacing="8" cellpadding="6" bgcolor="#f6f6f6">
-        <tr align="center">
-            <td><b>All</b></td>
-            <td>Music</td>
-            <td>Gaming</td>
-            <td>Live</td>
-            <td>News</td>
-            <td>Programming</td>
-            <td>Podcasts</td>
-            <td>Sports</td>
-            <td>Recently Uploaded</td>
+
+    <table width="100%" cellspacing="8" cellpadding="6" id="categories">
+        <tr align="center" id="category">
+            <td class="category-items">All</td>
+            <td class="category-items">Music</td>
+            <td class="category-items">Gaming</td>
+            <td class="category-items">Live</td>
+            <td class="category-items">News</td>
+            <td class="category-items">Programming</td>
+            <td class="category-items">Podcasts</td>
+            <td class="category-items">Sports</td>
+            <td class="category-items">Recently Uploaded</td>
         </tr>
     </table>
+
 
     <br>
 
@@ -69,7 +71,7 @@
             <td width="82%">
                 <table width="100%" cellspacing="14" cellpadding="0">
                     <tr valign="top">
-                        <td width="33%">
+                        <td width="33%" class="video-card">
                             <a href="#"><img src="https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg" alt="Video thumbnail 1" width="100%"></a>
                             <p><b>HTML Full Course for Beginners</b></p>
                             <p>Code School</p>

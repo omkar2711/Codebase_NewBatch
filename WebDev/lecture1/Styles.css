@@ -1,0 +1,27 @@
+* {
+    color : white;
+    background-color: black;
+    text-align: center;
+}
+
+li {
+
+    text-align: center;
+}
+
+
+#skills{
+
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.section-heading {
+
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#college {
+    border: 1px solid white;
+}
