@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone - HTML Only</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo-area">
+            <a href="#" aria-label="YouTube home">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/120px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube logo" width="36" height="25">
+            </a>
+            <span class="youtube-text">YouTube</span>
+        </div>
+
+        <form class="search-area">
+            <input id="search-input" type="text" placeholder="Search">
+            <button id="search-btn" type="submit">Search</button>
+        </form>
+
+        <div class="actions-area">
+            <button type="button" class="ghost-btn">Create</button>
+            <button type="button" class="ghost-btn">Notifications</button>
+            <button type="button" class="signin-btn">Sign In</button>
+        </div>
+    </header>
+
+    <section class="categories" aria-label="Category filters">
+        <button class="category-item active" type="button">All</button>
+        <button class="category-item" type="button">Music</button>
+        <button class="category-item" type="button">Gaming</button>
+        <button class="category-item" type="button">Live</button>
+        <button class="category-item" type="button">News</button>
+        <button class="category-item" type="button">Programming</button>
+        <button class="category-item" type="button">Podcasts</button>
+        <button class="category-item" type="button">Sports</button>
+        <button class="category-item" type="button">Recently Uploaded</button>
+    </section>
+
+    <main class="layout">
+        <aside class="sidebar" aria-label="Primary sidebar">
+            <p class="sidebar-item active">Home</p>
+            <p class="sidebar-item">Shorts</p>
+            <p class="sidebar-item">Subscriptions</p>
+            <hr>
+            <p class="sidebar-title">You</p>
+            <p class="sidebar-item">History</p>
+            <p class="sidebar-item">Playlists</p>
+            <p class="sidebar-item">Watch Later</p>
+            <p class="sidebar-item">Liked Videos</p>
+            <hr>
+            <p class="sidebar-title">Explore</p>
+            <p class="sidebar-item">Trending</p>
+            <p class="sidebar-item">Shopping</p>
+            <p class="sidebar-item">Music</p>
+            <p class="sidebar-item">Movies</p>
+            <p class="sidebar-item">Live</p>
+            <p class="sidebar-item">Gaming</p>
+        </aside>
+
+        <section class="content" aria-label="Video feed">
+            <div class="video-grid">
+                <article class="video-card">
+                    <a href="#"><img src="https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg" alt="Video thumbnail 1"></a>
+                    <h3>HTML Full Course for Beginners</h3>
+                    <p class="channel">Code School</p>
+                    <p class="meta">1.2M views • 2 days ago</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="#"><img src="https://i.ytimg.com/vi/qz0aGYrrlhU/hqdefault.jpg" alt="Video thumbnail 2"></a>
+                    <h3>Build a Website Using Only HTML</h3>
+                    <p class="channel">Web Makers</p>
+                    <p class="meta">860K views • 4 days ago</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="#"><img src="https://i.ytimg.com/vi/pQN-pnXPaVg/hqdefault.jpg" alt="Video thumbnail 3"></a>
+                    <h3>Learn HTML in One Video</h3>
+                    <p class="channel">Dev Tutorials</p>
+                    <p class="meta">2M views • 1 week ago</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="#"><img src="https://i.ytimg.com/vi/mJgBOIoGihA/hqdefault.jpg" alt="Video thumbnail 4"></a>
+                    <h3>YouTube Layout Project in HTML</h3>
+                    <p class="channel">Frontend Basic</p>
+                    <p class="meta">640K views • 10 days ago</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="#"><img src="https://i.ytimg.com/vi/UB1O30fR-EE/hqdefault.jpg" alt="Video thumbnail 5"></a>
+                    <h3>Create Navbar and Sidebar in HTML</h3>
+                    <p class="channel">Code Mastery</p>
+                    <p class="meta">410K views • 2 weeks ago</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="#"><img src="https://i.ytimg.com/vi/kUMe1FH4CHE/hqdefault.jpg" alt="Video thumbnail 6"></a>
+                    <h3>Website Structure with Semantic Tags</h3>
+                    <p class="channel">Tech Concepts</p>
+                    <p class="meta">980K views • 3 weeks ago</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
