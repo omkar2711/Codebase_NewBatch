@@ -1,0 +1,10 @@
+#App {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#store-title {
+  text-align: center;
+  margin-top: 20px;
+}

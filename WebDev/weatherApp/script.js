@@ -1,3 +1,4 @@
+import data from './data.js';
 const fetchWeather = async (city, country) => {
     try {
         const apiKey = '331ca92302e15a439c9d10c2f72bc394';
