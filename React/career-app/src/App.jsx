@@ -1,13 +1,55 @@
-import React, {useState} from 'react'
+import React, {useState , useEffect, useMemo, useCallback, useRef} from 'react'
 import './App.css';
 import JobListing from './components/JobListing';
 import fetchJobs from './apis/api';
 
 const App = () => {
 
+
+
+  //useState
   const [jobs, setJobs] = useState([]);
   const [query , setQuery] = useState('');
   const [country, setCountry] = useState('');
+  const [count , setCount] = useState(0);
+
+  const ref = useRef(initialValue);
+
+  //useEffect
+  useEffect(()=>{
+    console.log("useEffect called");
+    // setCount(count + 1); //avoid changing state inside useffect
+
+    // const interval = setInterval(()=>{
+    //   console.log("Timer running...")
+    // }, 1000);
+
+    return () => {
+      //cleanup
+      // clearInterval(interval);
+    }
+  },[])
+
+
+  //useMemo
+  const expensiveCalculation = () => {
+    let sum = 0;
+    for(let i = 0;i<10000;i++){
+      sum += i;
+    }
+  }
+
+  const memoizedValue = useMemo(()=>{
+    return expensiveCalculation();
+  },[]);
+
+  //useCallback
+  const handleClick = useCallback(() => {
+    console.log("Clicked....");
+  },[count]);
+
+  
+  
 
   const handleSearch = async () => {
     try{
@@ -19,6 +61,8 @@ const App = () => {
       console.log(err)
     }
   }
+
+ 
 
   // console.log(query);
   // console.log(country);
@@ -33,6 +77,8 @@ const App = () => {
           <p>
             Search openings by keyword and country, then explore current listings in a modern board layout.
           </p>
+          <p>Count : {count}</p>
+          <button onClick={handleClick}>Click</button>
         </div>
 
         <div className="search-panel">

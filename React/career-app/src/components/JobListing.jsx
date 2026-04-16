@@ -1,7 +1,11 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import './JobListing.css'
 
 const JobListing = ({jobs}) => {
+
+
+    const value = useContext(MyContext);
+    //useState
   return (
     <div className="job-grid">
       {jobs.map((job) => (
