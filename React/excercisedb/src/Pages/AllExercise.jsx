@@ -1,13 +1,12 @@
-import React from 'react'
 import { useState , useEffect } from 'react'
-import {getAllExercises} from '../apis/api'
+import { getExercises } from '../apis/api'
 
 const AllExercise = () => {
   const [exercises , setExercises] = useState([])
 
   useEffect(()=>{
     const fetchExercises = async () =>{
-      const data = await getAllExercises();
+      const data = await getExercises();
       setExercises(data);
     };
     fetchExercises();

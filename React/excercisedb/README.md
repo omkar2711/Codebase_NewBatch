@@ -1,16 +1,51 @@
-# React + Vite
+# Gym Beginner Hub (ExerciseDB)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern beginner-friendly fitness frontend built with React + Vite and powered by the ExerciseDB API on RapidAPI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- API health check (`GET /status`)
+- Full exercise browsing with pagination (`GET /exercises`)
+- Search by name (`GET /exercises/name/{name}`)
+- Filter by body part (`GET /exercises/bodyPart/{bodyPart}`)
+- Filter by target muscle (`GET /exercises/target/{target}`)
+- Filter by equipment (`GET /exercises/equipment/{equipment}`)
+- Metadata lists for selectors:
+	- `GET /exercises/bodyPartList`
+	- `GET /exercises/targetList`
+	- `GET /exercises/equipmentList`
+- Exercise detail view (`GET /exercises/exercise/{id}`)
+- GIF image streaming with quality control (`GET /image`)
+- Favorites persistence in local storage
+- Beginner plan generator
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Create your env file:
+
+```bash
+cp .env.example .env
+```
+
+3. Add your RapidAPI key in `.env`:
+
+```env
+VITE_RAPIDAPI_KEY=your_rapidapi_key_here
+```
+
+4. Start the app:
+
+```bash
+npm run dev
+```
+
+## Notes
+
+- The app intentionally uses live API calls and does not cache ExerciseDB content.
+- The image endpoint uses the API key as a query parameter because image streaming is rendered directly in `<img>` tags.
