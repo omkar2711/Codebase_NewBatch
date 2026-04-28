@@ -1,0 +1,27 @@
+states -> prop drilling -> useContext -> redux
+
+redux : global state management library
+- central store
+- actions
+- reducers
+- middleware (e.g. thunk, saga)
+- dev tools -> redux toolkit
+- predictable state updates
+- unidirectional data flow
+- performance optimization (e.g. memoization, selectors)
+
+
+key terminology:
+- store: holds the entire state of the application
+- action: an object that describes a change in the state
+- reducer: a pure function that takes the current state and an action, and returns a new state
+- middleware: functions that intercept actions before they reach the reducer, allowing for side effects and asynchronous actions
+- dispatch: a function that sends an action to the store to update the state
+- selector: a function that extracts specific pieces of state from the store, often used for performance optimization
+- provider: a component that makes the Redux store available to the rest of the app
+
+
+rules :
+- state is read-only: the only way to change the state is to emit an action, which is an object describing what happened
+- changes are made with pure functions: to specify how the state tree is transformed by actions, you write pure reducers
+- single source of truth: the state of your whole application is stored in an object tree within a single store
