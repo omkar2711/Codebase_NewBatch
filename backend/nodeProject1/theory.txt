@@ -1,0 +1,5 @@
+node modules:
+    - http : used to create a server and handle HTTP requests and responses.
+    - fs : used to work with the file system.
+    - path : used to work with file and directory paths.
+    - os : used to work with operating system-related functionality.
