@@ -1,6 +1,7 @@
 import userData from "../utils/userData.js";
 import User from "../model/userModel.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 const loginService = async (email, password) => {
     const user = await User.findOne({ email });
@@ -8,7 +9,8 @@ const loginService = async (email, password) => {
     if (user) {
         const isMatch = await bcrypt.compare(password, user.password);
         if (isMatch) {
-            return { success: true, message: 'Login successful', user };
+            const token = jwt.sign({ id: user._id , role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
+            return { success: true, message: 'Login successful', user, token };
         } else {
             return { success: false, message: 'Invalid email or password' };
         }
@@ -17,7 +19,7 @@ const loginService = async (email, password) => {
     }
 };
 
-const registerService = async (name, email, password) => {
+const registerService = async (name, email, password, role) => {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
         return { success: false, message: 'Email already exists' };
@@ -27,7 +29,8 @@ const registerService = async (name, email, password) => {
         const newUser = new User({
             name,
             email,
-            password : hashedPassword
+            password : hashedPassword,
+            role
         });
         await newUser.save();
         return { success: true, message: 'Registration successful', user: newUser };

@@ -30,11 +30,11 @@ const registerController = async (req, res) => {
         if(!req.body) {
             return res.status(400).json({ success: false, message: 'Request body is missing' });
         }
-        const { name, email, password } = req.body;
-        if(!name || !email || !password) {
-            return res.status(400).json({ success: false, message: 'Name, email and password are required' });
+        const { name, email, password,role } = req.body;
+        if(!name || !email || !password || !role) {
+            return res.status(400).json({ success: false, message: 'Name, email, password and role are required' });
         }
-        const result = await registerService(name, email, password);
+        const result = await registerService(name, email, password, role);
         
         if (result.success) {
             res.json(result);
